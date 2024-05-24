@@ -4,7 +4,7 @@ from pathlib import Path
 
 #We will use the coloring to get the filename and line number
 #This is likely not very portable but will solve my immediate needs
-line_re = re.compile('^\x1b\[35m\x1b\[K(.*?)\x1b.*$')
+line_re = re.compile(r'^\x1b\[35m\x1b\[K(.*?)\x1b.*$')
 line_buffer = tuple(sys.stdin)
 
 def iso_format(timestamp):
